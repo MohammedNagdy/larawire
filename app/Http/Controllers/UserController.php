@@ -14,7 +14,7 @@ class UserController extends Controller
     }
     //
 
-    public function store(Request $request)
+    public static function store(Request $request)
     {
         User::create([
             'name'      => $request->get('name'),
@@ -27,9 +27,9 @@ class UserController extends Controller
             ->with('flash_notification.level', 'success');
     }
 
-    public function update(User $user, Request $request)
+    public static function update(User $user, Request $request)
     {
-        $this->validate($request, [
+        self::validate($request, [
             'name'      => 'required',
             'email'     => 'required|email',
             'password'  => 'confirmed'
@@ -42,7 +42,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        return redirect('/todo')
+        return redirect('tasks')
             ->with('flash_notification.message', 'Profile updated successfully')
             ->with('flash_notification.level', 'success');
 

@@ -1,3 +1,7 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    <livewire:components.task-form />
+    {{$task}}
+    @foreach($tasks as $task)
+        <livewire:components.card key="{{now()}}" :title="$task['title']" :description="$task['description']"/>
+    @endforeach
 </div>

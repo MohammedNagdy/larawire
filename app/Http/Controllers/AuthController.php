@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     //
-    public function login(Request $request)
+    public static function authenticate(Request $request)
     {
         if (Auth::attempt([
             'email'    => $request->get('email'),
             'password' => $request->get('password'),
         ], $request->get('remember'))) {
             return redirect()
-                ->intended('/todo')
+                ->intended('/tasks')
                 ->with('flash_notification.message', 'Logged in successfully')
                 ->with('flash_notification.level', 'success');
         }
@@ -26,7 +26,7 @@ class AuthController extends Controller
             ->with('flash_notification.level', 'danger');
     }
 
-    public function logout(Request $request)
+    public static function logout(Request $request)
     {
         Auth::logout();
 
