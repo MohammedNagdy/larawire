@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Larawire</a>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
+        @auth()
+            <a class="navbar-brand" href="/tasks" wire:navigate>Larawire</a>
+        @else
+            <a class="navbar-brand" href="/" wire:navigate>Larawire</a>
+        @endif
+            <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 @auth()
                 <li class="nav-item">
