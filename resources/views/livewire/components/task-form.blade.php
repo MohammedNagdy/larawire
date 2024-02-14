@@ -1,4 +1,4 @@
-<form wire:submit="save" class="w-50 mt-20 container-sm align-middle justify-content-center align-items-center">
+<form wire:submit="save" class="mt-4 container-sm align-middle justify-content-center align-items-center " style="width: 40rem;">
     <div class="input-group mb-3">
         <input wire:model="form.title" type="text" class="form-control" placeholder="task title" aria-label="Title" aria-describedby="basic-addon1">
     </div>

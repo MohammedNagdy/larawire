@@ -1,4 +1,4 @@
-<form wire:submit="register" class="w-50 mt-20 container-sm align-middle justify-content-center align-items-center">
+<form wire:submit="register" class="container-sm p-4 align-middle justify-content-center rounded white-background align-items-center position-absolute" style="top: 50%; left: 50%;transform: translate(-50%,-50%);width: 40rem;">
     <div class="input-group mb-3">
         <input wire:model="form.username" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
     </div>

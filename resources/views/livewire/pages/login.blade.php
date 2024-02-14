@@ -1,4 +1,4 @@
-<form wire:submit="login" class="w-50 mt-20 container-sm align-middle justify-content-center align-items-center">
+<form wire:submit="login" class="p-4 container-sm align-middle justify-content-center rounded white-background align-items-center position-absolute" style="top: 50%; left: 50%;transform: translate(-50%,-50%);width: 40rem;">
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">@</span>
         <input wire:model="form.email" type="text" class="form-control" placeholder="email" aria-label="Email" aria-describedby="basic-addon1">

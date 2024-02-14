@@ -1,0 +1,36 @@
+.box-sm {
+    width: 40rem;
+}
+.dark-background {
+    background: rgb(2,0,36);
+}
+
+.white-background {
+    background-color: #e2e8f0;
+}
+
+.big-title {
+    font-size: 10rem;
+}
+
+.typed {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) normal infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+/* Animation */
+/*.anim-typewriter{*/
+/*    animation: typewriter 4s steps(44) 1s 1 normal both,*/
+/*    blinkTextCursor 500ms steps(44) infinite normal;*/
+/*}*/
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}

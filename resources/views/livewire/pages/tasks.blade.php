@@ -1,7 +1,6 @@
 <div>
     <livewire:components.task-form />
-    {{$task}}
-    @foreach($tasks as $task)
+    @foreach($tasks as $index => $task)
         <livewire:components.card key="{{now()}}" :title="$task['title']" :description="$task['description']"/>
     @endforeach
 </div>

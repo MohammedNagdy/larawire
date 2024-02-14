@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class Card extends Component
 {
+    public string $key = '';
     public string $title = '';
     public string $description = '';
 

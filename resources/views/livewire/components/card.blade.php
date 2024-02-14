@@ -1,7 +1,6 @@
-<div class="container-sm w-50 mt-3 card" >
+<div class="container-sm mt-3 card p-4 white-background" style="width: 40rem;">
     <h5 class="card-header">{{ $title }}</h5>
     <div class="card-body">
         <p class="card-text">{{ $description }}</p>
-{{--        <a href="#" class="btn btn-primary">Go somewhere</a>--}}
     </div>
 </div>

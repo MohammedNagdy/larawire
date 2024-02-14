@@ -11,11 +11,11 @@ class Tasks extends Component
     public string $task = 'Hi';
 
     public array $tasks = [
-//      [
-//          'id' => '22',
-//          'title' => 'Special title treatment',
-//          'description' => 'With supporting text below as a natural lead-in to additional content.'
-//      ],
+      [
+          'id' => '22',
+          'title' => 'Special title treatment',
+          'description' => 'With supporting text below as a natural lead-in to additional content.'
+      ],
     ];
 
     public function mount()
@@ -32,7 +32,6 @@ class Tasks extends Component
     #[On('task-added')]
     public function addTask($task)
     {
-        print_r($task);
         $this->task = $task['title'];
         array_unshift($this->tasks, $task);
     }
